@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="app">
+        <span p-text="msg"></span>
+        <br>
+        <input type="text" p-model="msg">
+    </div>
+    <script src="main.js"></script>
+    <script>
+        const { createApp } = miniVue;
+
+        const app = createApp({
+            data() {
+                return{
+                    msg: "hola mundo"
+                }
+            }
+        })
+
+        app.mount();
+    </script>
+</body>
+</html>
